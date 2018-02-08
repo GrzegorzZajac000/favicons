@@ -90,3 +90,5 @@ test/files-online
 test/images-offline
 test/images-online
 test/stream
+.idea/
+package-lock.json

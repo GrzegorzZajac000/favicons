@@ -25,6 +25,7 @@ var favicons = require('favicons'),
     source = 'test/logo.png',           // Source image(s). `string`, `buffer` or array of `string`
     configuration = {
         appName: null,                  // Your application's name. `string`
+        short_name: null,               // Your application's short name. `string`§
         appDescription: null,           // Your application's description. `string`
         developerName: null,            // Your (or your developer's) name. `string`
         developerURL: null,             // Your (or your developer's) URL. `string`
