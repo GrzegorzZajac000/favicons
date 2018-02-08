@@ -225,7 +225,7 @@ var path = require('path'),
                     print('Files:create', 'Creating file: ' + name);
                     if (name === 'manifest.json') {
                         properties.name = options.appName;
-                        properties.short_name = options.appName;
+                        properties.short_name = options.short_name || options.appName;
                         properties.description = options.appDescription;
                         properties.dir = options.dir;
                         properties.lang = options.lang;
@@ -385,6 +385,7 @@ var path = require('path'),
 
                         request.favicon_design.android_chrome.theme_color = options.background;
                         request.favicon_design.android_chrome.manifest.name = options.appName;
+                        request.favicon_design.android_chrome.manifest.short_name = options.short_name;
                         request.favicon_design.android_chrome.manifest.display = options.display;
                         request.favicon_design.android_chrome.manifest.orientation = options.orientation;
 
@@ -436,6 +437,7 @@ var path = require('path'),
                         request.favicon_design.firefox_app.background_color = firefoxOptions.background;
                         request.favicon_design.firefox_app.margin = Math.round(FIREFOX_BASE_SIZE / 100 * firefoxOptions.offset);
                         request.favicon_design.firefox_app.manifest.app_name = options.appName;
+                        request.favicon_design.firefox_app.manifest.short_name = options.short_name;
                         request.favicon_design.firefox_app.manifest.app_description = options.appDescription;
                         request.favicon_design.firefox_app.manifest.developer_name = options.developerName;
                         request.favicon_design.firefox_app.manifest.developer_url = options.developerURL;
